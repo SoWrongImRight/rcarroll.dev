@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>rcarroll.dev</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/ce1247ceea.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="floatingButton gone">
+      <a href="#home">
+        <img src="img/home.png" height="30px" width="30px" class="centered"/>
+      </a>
+    </div>
+    
+    <nav id="home" class="home">
+      <div class="title gone">
+        <h1>RCARROLL.DEV</h1>
+      </div>
+      <div class="navlinks gone">
+        <!-- <a href="#top" class="link">Home</a> -->
+        <a href="#about" class="link">About</a>
+        <a href="#skills" class="link">Skills</a>
+        <a href="#projects" class="link">Projects</a>
+        <a href="#contact" class="link">Contact</a>
+      </div>
+    </nav>    
+    <main>
+      <section id="intro">
+        <!-- <div class="introButton centered">
+          <button onclick="enterClick()">Enter</button>
+        </div> -->
+        <div class="introMenu">
+          <div class="start">
+            <i class="fa-solid fa-play" id="start"></i>
+            <button class="emptyButton" onclick="enterClick()" ><h1>START</h1></button>
+          </div>
+          <div class="quit">
+            <i class="fa-solid fa-play hidden" id="quit"></i>
+            <button class="emptyButton" onclick="quitClick()"><h1>QUIT</h1></button>
+          </div>
+        </div>
+      </section>
+      <div class="gone">
+        <section id="about" class="box">
+          <h2>About</h2>
+          <hr />
+          <div class="aboutDivider">
+            <div>
+              <div class="aboutPic">
+              </div>
+            </div>
+            <div class="aboutText">
+              <p>Welcome to my developer profile! I am a full-stack developer with expertise in a variety of technologies, including React, Next.js, Svelte, Python, Django, Node.js, and Express.js. I have a strong understanding of both front-end and back-end development, and enjoy building and designing sleek and responsive web applications.</p>
+              <p>I am also well-versed in working with databases, including both SQL and NoSQL like PostgreSQL and MongoDB. Whether it's a simple landing page or a complex web application, I have the skills and experience to bring your project to life. Let's work together to create something amazing!</p>
+            </div>
+          </div>
+        </section>
+        <section id="skills" class="box">
+          <h2>Skills</h2>
+          <hr />
+          <div class="skillOptions">
+            <div>
+              <h3><button onclick="skillSelect('fe')">Front End</button></h3>
+            </div>
+            <div>
+              <h3><button onclick="skillSelect('be')">Back End</button></h3>
+            </div>
+          </div>
+          <div class="skillSection">
+            <div class="gone fe">
+              <ul>
+                <li>
+                  <details>
+                    <summary>React</summary>
+                    <p>ReactJS is a JavaScript library for building user interfaces, allows building reusable UI components, improve performance with virtual DOM and improve developer experience with JSX syntax.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>NextJS</summary>
+                    <p>Next.js is a JavaScript framework that allows building server-rendered React applications with automatic code splitting, static site generation and easy deployment options</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>Svelte</summary>
+                    <p>Svelte is a JavaScript framework that allows building web applications with a lightweight, reactive and readable syntax, it compiles code at build-time, resulting in small bundle sizes and fast runtime performance.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>HTML</summary>
+                    <p>HTML (Hypertext Markup Language) is a markup language used to structure and format content on the web, it provides a means to create structured documents, with headings, paragraphs, links, images and other content, creating the basic layout of a webpage.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>CSS</summary>
+                    <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in a markup language like HTML, it provides visual styling, layout, and formatting options to separate the presentation of a webpage from its structure and content.</p>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="gone be">
+              <ul>
+                <li>
+                  <details>
+                    <summary>Django</summary>
+                    <p>Django is a high-level Python web framework that enables rapid development of secure and maintainable websites, follows the model-view-controller architectural pattern, and includes built-in features such as authentication, database ORM, and admin panel.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>NodeJS</summary>
+                    <p>Node.js is an open-source, cross-platform JavaScript runtime environment that enables the execution of JavaScript code on the server-side, it allows building fast, efficient and scalable network applications, popular for real-time applications and Microservices.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>ExpressJS</summary>
+                    <p>Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications, it simplifies the process of routing HTTP requests, handling input/output data, and handling errors.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>FastAPI</summary>
+                    <p>FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. It is easy to learn and use with a simple syntax, automatic validation, and easy error handling.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>PostgreSQL</summary>
+                    <p>PostgreSQL is an open-source, powerful, and extensible relational database management system (RDBMS) that supports SQL and offers advanced features such as reliability, data integrity, and performance, it is widely used in production environments.</p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>MongoDB</summary>
+                    <p></p>
+                  </details>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="projects" class="box">
+          <h2>Projects</h2>
+          <hr />
+        </section>
+        <section id="contact" class="box">
+          <h2>Contact</h2>
+          <hr />
+        </section>
+      </main>
+    </div>
+    <footer class="gone">
+
+    </footer>
+    <script src="main.js" async defer></script>
+  </body>
+</html>
