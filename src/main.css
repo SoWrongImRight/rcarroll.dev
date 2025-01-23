@@ -339,6 +339,39 @@ main {
   border-bottom: 1px solid white;
 }
 
+.pixelated-icon {
+  font-size: 50px;
+  color: #0077b5;
+  image-rendering: pixelated;
+  display: inline-block;
+}
+
 footer {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .project-list {
+    display: none;
+  }
+
+  .project-gone {
+    display: block !important;
+  }
+
+  .project {
+    max-width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+  };
+
+  .project ul li {
+    font-size: .75rem;
+    margin: .25rem;
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-radius: 10px;
+  }
+
 }
