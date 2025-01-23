@@ -40,6 +40,10 @@ a {
   display: none;
 }
 
+.project-gone {
+  display: none;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -50,6 +54,7 @@ a {
   color: inherit;
   padding: 0;
   margin: 0;
+  font-size: inherit;
 }
 
 .centered {
@@ -222,21 +227,21 @@ main {
   justify-content: space-evenly;
 }
 
-.skillOptions button {
+.skillOptions button, .project-list button {
   background: inherit;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
 }
 
-.skillOptions button:hover {
+.skillOptions button:hover, .project-list button:hover {
   cursor: pointer;
   background: white;
   color: black;
   animation: blink 1s linear infinite;
 }
 
-.skillOptions button:hover:after {
+.skillOptions button:hover:after, .project-list button:hover::after {
   content: "?";
 }
 
@@ -290,6 +295,48 @@ main {
   border-radius: 5px;
   background: white;
   color: black;
+}
+
+.project {
+  max-width: 100%;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+.project-list-container {
+  display: flex;
+}
+
+.project-list {
+  flex: 0 0 30%;
+  list-style-type: none;
+}
+
+.project-detail {
+  flex: 1;
+}
+
+.project ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.project ul li {
+  margin: 1rem;
+  background-color: white;
+  color: black;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+.project h5 {
+  margin-bottom: 0;
+}
+
+.project h5, .project ul {
+  border-bottom: 1px solid white;
 }
 
 footer {

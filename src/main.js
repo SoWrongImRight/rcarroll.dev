@@ -88,3 +88,35 @@ details.forEach((targetDetail) => {
     });
   });
 });
+
+// Project list
+
+const projectButtons = document.querySelectorAll('.project-list button');
+
+projectButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const project = button.getAttribute('data-project');
+
+    const projectDetails = document.querySelectorAll('.project-details > div');
+
+    projectDetails.forEach(detailDiv => {
+      if (detailDiv.getAttribute('data-project') === project) {
+        detailDiv.classList.remove('project-gone')
+      } else {
+        detailDiv.classList.add('project-gone')
+      }
+    })
+  })
+})
+
+// Footer content change on hover
+const footerContet = document.getElementById('footer-content');
+
+footerContet.addEventListener('mouseover', () => {
+  const currentYear = new Date().getFullYear();
+  footerContet.textContent = `© RCARROLL.DEV ${currentYear}`
+})
+
+footerContet.addEventListener('mouseout', () => {
+  footerContet.textContent = "Ye Olde Footer"
+})

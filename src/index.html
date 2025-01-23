@@ -61,7 +61,7 @@
               </div>
             </div>
             <div class="aboutText">
-              <p>Welcome to my developer profile! I am a full-stack developer with expertise in a variety of technologies, including React, Next.js, Svelte, Python, Django, Node.js, and Express.js. I have a strong understanding of both front-end and back-end development, and enjoy building and designing sleek and responsive web applications.</p>
+              <p>Welcome to my developer profile! I am a full-stack developer with expertise in a variety of technologies, including React, Next.js, Svelte, Python,FastAPI, Django, Node.js, and Express.js. I have a strong understanding of both front-end and back-end development, and enjoy building and designing sleek and responsive web applications.</p>
               <p>I am also well-versed in working with databases, including both SQL and NoSQL like PostgreSQL and MongoDB. Whether it's a simple landing page or a complex web application, I have the skills and experience to bring your project to life. Let's work together to create something amazing!</p>
             </div>
           </div>
@@ -157,6 +157,67 @@
         <section id="projects" class="box">
           <h2>Projects</h2>
           <hr />
+          <div class="project-list-container">
+            <div class="project-list">
+              <li>
+                <h3><button data-project="rcarroll">This Website</button></h3>
+              </li>
+              <li>
+                <h3><button data-project="nti">NTICentral</button></h3>
+              </li>
+              <li>
+                <h3><button data-project="hat">Hardware Assesment Tool</button></h3>
+              </li>
+              <li>
+                <h3><button data-project="uvt">User Verification Tool</button></h3>
+              </li>
+            </div>
+            <div class="project-details">
+              <div class="project rcarroll" data-project="rcarroll">
+                <h4>RCARROLL.DEV</h4>
+                <h5>Skills</h5>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <p>I designed this website to showcase my skills and projects, but also as a throwback to the very first project I ever developed.  It was an RPG, inspired by Final Fantasy and Dragon Quest for the NES, written in BASIC.</p>
+              </div>
+              <div class="project-gone project nti" data-project="nti">
+                <h4>NTICentral.org</h4>
+                <h5>Skills</h5>
+                <ul>
+                  <li>React</li>
+                  <li>Python Django</li>
+                  <li>Django REST</li>
+                  <li>PostgreSQL</li>
+                </ul>
+                <p>The company wanted to update and modernize their web site and the underlying technology.  The requirements was a site that looked clean and professional, allowed for the marketing team to update content and post articles, and was easy to maintain.  React allowed for efficient development of a Single Page Application that was capable of keeping trackt of state.  Python's Django is practically purpose built to provide ease of access for site administrators to update and add new content.  The REST framework made integration with the front end easy and straightforward.  PostgreSQL was selected due to it being actively maintained, open source, and reliable</p>
+              </div>
+              <div class="project-gone project" data-project="hat">
+                <h4>Hardware Assesment Tool</h4>
+                <h5>Skills</h5>
+                <ul>
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>PyInstaller</li>
+                  <li>SMTPLib</li>
+                </ul>
+                <p>This tool was created to allow non-technical users to run it on their machine and collect hardware data, such as IP address, network speed, processor, and RAM.  It created a PDF that contained the information and then emailed it to an Applicant Tracking System.</p>
+              </div>
+              <div class="project-gone project" data-project="uvt">
+                <h4>User Verification Tool</h4>
+                <h5>Skill</h5>
+                <ul>
+                  <li>NodeJS</li>
+                  <li>Electron</li>
+                  <li>Twilio</li>
+                  <li>Nodemailer</li>
+                </ul>
+                <p>This tool was developed to be able to send unique codes to either an email address or a phone number for user verification.  The code was not provided to the agent using the tool, to prevent the agent from entering the correct code regardless of what the end user provided.</p>
+              </div>
+            </div>
+          </div>
         </section>
         <section id="contact" class="box">
           <h2>Contact</h2>
@@ -165,7 +226,7 @@
       </main>
     </div>
     <footer class="gone">
-      <h2>Ye Olde Footer</h2>
+      <h2 id="footer-content">Ye Olde Footer</h2>
     </footer>
     <script src="main.js" async defer></script>
   </body>
