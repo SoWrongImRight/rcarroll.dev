@@ -373,5 +373,23 @@ footer {
     padding: .5rem;
     border-radius: 10px;
   }
+}
 
+@media (max-width: 360px) {
+  .project-list {
+          display: none;
+  }
+
+  .project-gone {
+    display: block !important;
+  }
+
+  .project ul li {
+    font-size: .5rem;
+    margin: .1rem;
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-radius: 10px;
+  }
 }
