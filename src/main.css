@@ -10,8 +10,15 @@
   }
 }
 
+/* --- Layout sanity --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
   display: block;
 }
 
@@ -20,12 +27,6 @@ body {
   color: white;
   font-size: calc(10px + 2vmin);
 }
-
-/* @media (min-width: 800px) {
-  body {
-    font-size: calc(10px + 2vmin);
-  }
-} */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: connection;
@@ -36,17 +37,9 @@ a {
   text-decoration: none;
 }
 
-.gone {
-  display: none;
-}
-
-.project-gone {
-  display: none;
-}
-
-.hidden {
-  visibility: hidden;
-}
+.gone { display: none; }
+.project-gone { display: none; }
+.hidden { visibility: hidden; }
 
 .emptyButton {
   background: inherit;
@@ -79,15 +72,14 @@ a {
   animation: blink 1.25s linear infinite;
 }
 
+/* --- Responsive main width --- */
 main {
-  width: 90vw;
+  width: min(900px, calc(100% - 2rem));
   margin: 0 auto;
   text-align: center;
 }
 
-#intro {
-  overflow: hidden;
-}
+#intro { overflow: hidden; }
 
 .introMenu {
   position: absolute;
@@ -101,11 +93,10 @@ main {
 
 .introMenu i {
   padding-right: 0.5rem;
-  animation: blink 1s linear infinite ;
+  animation: blink 1s linear infinite;
 }
 
-.start,
-.quit {
+.start, .quit {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -117,7 +108,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -128,39 +119,27 @@ main {
 }
 
 @media (min-width: 741px) {
-  .home {
-    flex-direction: row;
-  }
+  .home { flex-direction: row; }
 
-  .home a {
-    font-size: 120%;
-  }
+  .home a { font-size: 120%; }
 
   .home h1,
   .home a:hover {
     background: white;
-    color: black;  
+    color: black;
     animation: blink 1.25s linear infinite;
   }
-  
-  .home a:hover:after {
-    content: "?";
+
+  .home a:hover:after { content: "?"; }
+
+  main {
+    width: min(900px, 50vw);
   }
 
   @keyframes blink {
-    0%{
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.7;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  main {
-    width: 50vw;
+    0% { opacity: 0; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0; }
   }
 }
 
@@ -168,7 +147,7 @@ main {
   border: 2px solid white;
   border-radius: 10px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .box h2 {
@@ -178,8 +157,8 @@ main {
 }
 
 @keyframes typing {
-  from {width: 0}
-  to {width: 100%}
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 .aboutDivider {
@@ -189,14 +168,10 @@ main {
 }
 
 @media (min-width: 741px) {
-  .aboutDivider {
-    flex-direction: row;
-  }
+  .aboutDivider { flex-direction: row; }
 }
 
-.aboutText {
-  padding: 1rem;
-}
+.aboutText { padding: 1rem; }
 
 .aboutPic {
   height: 200px;
@@ -217,9 +192,7 @@ main {
   transition: 1s;
 }
 
-.aboutImage:hover {
-  filter: grayscale(0%);
-}
+.aboutImage:hover { filter: grayscale(0%); }
 
 .skillOptions {
   display: flex;
@@ -227,28 +200,29 @@ main {
   justify-content: space-evenly;
 }
 
-.skillOptions button, .project-list button {
+@media (min-width: 741px) {
+  .skillOptions { flex-direction: row; }
+}
+
+.skillOptions button,
+.project-list button {
   background: inherit;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
 }
 
-.skillOptions button:hover, .project-list button:hover {
+.skillOptions button:hover,
+.project-list button:hover {
   cursor: pointer;
   background: white;
   color: black;
   animation: blink 1s linear infinite;
 }
 
-.skillOptions button:hover:after, .project-list button:hover::after {
+.skillOptions button:hover:after,
+.project-list button:hover::after {
   content: "?";
-}
-
-@media (min-width: 741px) {
-  .skillOptions {
-    flex-direction: row;
-  }
 }
 
 .skillSection details>summary {
@@ -256,33 +230,7 @@ main {
   cursor: pointer;
 }
 
-.skillSection details>summary::before {
-  font-family: 'Font Awesome 5 Free';
-  content: "\f02d  ";
-  font-weight: 900
-}
-
-.skillSection details[open]>summary::before {
-  font-family: 'Font Awesome 5 Free';
-  content: "\f518  ";
-  font-weight: 900  
-}
-
-.skillSection details>summary::after {
-  font-family: 'Font Awesome 5 Free';
-  content: " \f02d";
-  font-weight: 900
-}
-
-.skillSection details[open]>summary::after {
-  font-family: 'Font Awesome 5 Free';
-  content: " \f518";
-  font-weight: 900  
-}
-
-.skillSection ul {
-  list-style: none;
-}
+.skillSection ul { list-style: none; }
 
 .skillSection li {
   padding: 0.5rem;
@@ -291,7 +239,6 @@ main {
 
 .skillSection details p {
   padding: 1rem;
-  /* border: 2px solid white; */
   border-radius: 5px;
   background: white;
   color: black;
@@ -299,33 +246,23 @@ main {
 
 .project {
   max-width: 100%;
-  overflow: auto;
-  word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
-.project h4 {
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
+.project h4,
 .project p {
   overflow-wrap: break-word;
   word-break: break-word;
 }
 
-.project-list-container {
-  display: flex;
-}
+.project-list-container { display: flex; }
 
 .project-list {
   flex: 0 0 30%;
   list-style-type: none;
 }
 
-.project-details {
-  flex: 1;
-}
+.project-details { flex: 1; }
 
 .project ul {
   list-style-type: none;
@@ -336,18 +273,22 @@ main {
 }
 
 .project ul li {
-  margin: 1rem;
+  margin: .35rem;
   background-color: white;
   color: black;
-  padding: .5rem;
+  padding: .5rem .65rem;
   border-radius: 10px;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 
 .project h5 {
   margin-bottom: 0;
 }
 
-.project h5, .project ul {
+.project h5,
+.project ul {
   border-bottom: 1px solid white;
 }
 
@@ -358,50 +299,24 @@ main {
   display: inline-block;
 }
 
-footer {
-  text-align: center;
-}
+footer { text-align: center; }
 
 @media (max-width: 768px) {
-  .project-list {
-    display: none;
-  }
-
-  .project-gone {
-    display: block !important;
-  }
-
-  .project {
-    max-width: 100%;
-    overflow: auto;
-    word-wrap: break-word;
-  };
+  .project-list { display: none; }
+  .project-gone { display: block !important; }
 
   .project ul li {
     font-size: .75rem;
     margin: .25rem;
-    background-color: white;
-    color: black;
-    padding: .5rem;
-    border-radius: 10px;
   }
 }
 
 @media (max-width: 360px) {
-  .project-list {
-          display: none;
-  }
-
-  .project-gone {
-    display: block !important;
-  }
+  .project-list { display: none; }
+  .project-gone { display: block !important; }
 
   .project ul li {
     font-size: .65rem;
     margin: .1rem;
-    background-color: white;
-    color: black;
-    padding: .5rem;
-    border-radius: 10px;
   }
 }
