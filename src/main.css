@@ -301,6 +301,17 @@ main {
   max-width: 100%;
   overflow: auto;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.project h4 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.project p {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .project-list-container {
@@ -312,13 +323,14 @@ main {
   list-style-type: none;
 }
 
-.project-detail {
+.project-details {
   flex: 1;
 }
 
 .project ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0;
 }
@@ -385,7 +397,7 @@ footer {
   }
 
   .project ul li {
-    font-size: .5rem;
+    font-size: .65rem;
     margin: .1rem;
     background-color: white;
     color: black;
